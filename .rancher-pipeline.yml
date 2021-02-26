@@ -27,9 +27,8 @@ stages:
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-cmx
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
-        # Common answers
+        # Test common answers
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-        harbor.host: harbor-demo.iiidevops.org
         git.url: ${CICD_GIT_URL}
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.branch: ${CICD_GIT_BRANCH}
@@ -44,21 +43,22 @@ stages:
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-db
-      version: 0.2.0
+      version: 0.3.0
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
-        git.host: gitlab-demo.iiidevops.org
-        # 這裡是為了告訴要處理的git來源為何
-        git.repoName: ${CICD_GIT_REPO_NAME}
-        git.branch: ${CICD_GIT_BRANCH}
         db.type: mariadb
+        # Always true in this time
         db.gui: true
-        # 使用者資料庫管理密碼
         db.username: iiidevops
         db.password: templatePassword
-        # 使用者初始想要建立的資料庫名稱
         db.name: login
+        db.tag: 10.5
+        # Common project info
+        git.url: ${CICD_GIT_URL}
+        git.repoName: ${CICD_GIT_REPO_NAME}
+        git.branch: ${CICD_GIT_BRANCH}
+        git.commitID: ${CICD_GIT_COMMIT}
     when:
       branch:
         include:
@@ -91,7 +91,7 @@ stages:
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:iii-dev-charts3-web
-      version: 0.4.0
+      version: 0.5.0
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-serv
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
@@ -149,7 +149,6 @@ stages:
         web.port: 3000
         # Common answers
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-        harbor.host: harbor-demo.iiidevops.org
         git.url: ${CICD_GIT_URL}
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.branch: ${CICD_GIT_BRANCH}
@@ -169,7 +168,6 @@ stages:
       answers:
         # Common answers
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-        harbor.host: harbor-demo.iiidevops.org
         git.url: ${CICD_GIT_URL}
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.branch: ${CICD_GIT_BRANCH}
