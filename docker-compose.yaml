@@ -10,17 +10,17 @@ services:
       - db
     environment:
       db_name: login
-      db_username: postgres
+      db_username: root
       db_password: IIIdevops123!
       db_host: db
     ports:
       - 3000
   db:
-    image: bitnami/postgresql:13
+    image: bitnami/mariadb:10.5
     restart: always
     environment:
-      POSTGRESQL_DATABASE: login
-      POSTGRESQL_PASSWORD: IIIdevops123!
+      MARIADB_DATABASE: login
+      MARIADB_ROOT_PASSWORD: IIIdevops123!
     volumes:
       - ./db:/docker-entrypoint-initdb.d:rw
   adminer:
