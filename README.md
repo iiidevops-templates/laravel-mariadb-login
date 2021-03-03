@@ -54,7 +54,6 @@ docker-compose up -d --build
 ```dockerfile
 ENV 環境變數名稱 值
 ```
-5. 若使用者已有資料庫在本地端作業系統安裝資料庫，則可以透過
 
 
 ## reference
