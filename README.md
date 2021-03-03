@@ -1,4 +1,4 @@
-﻿# php-laravel-app-example1-login
+﻿# Laravel7-登入系統範例
 
 ## (local)本地環境隔離快速專案部屬(隨機PORT)
 需安裝Docker(Windows、Mac、Linux上均可安裝), 若在Linux環境需額外手動安裝docker-compose, 部屬結果與UI相同
