@@ -35,7 +35,9 @@ docker-compose up -d --build
         ],
 ```
 ### 修改框架版本
-而框架版本若非laravel:7, 想要更換框架版本請至`Dockefile`修改為自己想要的版本(如需要本機上做測試則須一併連同`Dockerfile.local`去做修改`
+而框架版本若非laravel:7, 想要更換框架版本請至`Dockefile`修改為自己想要的版本(如需要本機上做測試則須一併連同`Dockerfile.local`去做修改
+### Laravel .env
+若有進階需求需使用到`.env`檔案的話，可以修改於`app/.env.example`檔案內，部屬時會作為`.env`檔案做處理
 
 
 ## reference
