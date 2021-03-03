@@ -11,7 +11,7 @@ docker-compose up -d --build
 [Laravel Login Registration Tutorial](https://www.soengsouy.com/2020/04/laravel-7-register-and-login-account.html?m=1)
 
 ## 修改程式碼注意事項
-1. 修改資料庫連線
+1. 修改資料庫連線  
 由於系統採用固定獨特的環境變數作為資料庫連線方法, 因此專案的資料庫連線部分請勿更動`app/config/database.php`內的
 ```php
         'mysql' => [
@@ -34,9 +34,9 @@ docker-compose up -d --build
             ]) : [],
         ],
 ```
-2. 修改框架版本
+2. 修改框架版本  
 而框架版本若非laravel:7, 想要更換框架版本請至`Dockefile`修改為自己想要的版本(如需要本機上做測試則須一併連同`Dockerfile.local`去做修改
-3. Laravel .env
+3. Laravel .env  
 若有進階需求需使用到`.env`檔案的話，可以修改於`app/.env.example`檔案內，部屬時會作為`.env`檔案做處理
 
 
