@@ -11,7 +11,7 @@ docker-compose up -d --build
 [Laravel Login Registration Tutorial](https://www.soengsouy.com/2020/04/laravel-7-register-and-login-account.html?m=1)
 
 ## 開發者注意事項
-* 若專案建立後程式碼Pull到local端下來無法執行, 此狀況為正常現象
+:warning: 若專案建立後程式碼Pull到local端下來無法執行, 此狀況為正常現象
 * 要在local端測試部屬提供兩種方式，透過安裝docker來進行專案快速專案部屬或直接修改我您作業系統的環境變數(或是採用.env)
 * 若非用docker快速部屬想直接採用原本安裝在作業系統上的資料庫的話，請設定環境變數
 ```env
