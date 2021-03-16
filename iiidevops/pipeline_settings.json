@@ -1,6 +1,6 @@
 {
-  "name": "Laravel mariadb - login",
-  "description": "Laravel 7 / Mariadb: 10.5 <a href='https://github.com/iiidevops-templates/laravel-mariadb-login/blob/master/README.md'>登入(login)範本說明</a>",
+  "name": "Laravel7 mariadb - login",
+  "description": "Laravel 7 / Mariadb: 10.5 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/laravel-mariadb-login/blob/master/README.md'>登入(login)範本說明</a>",
   "arguments": [
     {
       "key": "db.username",
