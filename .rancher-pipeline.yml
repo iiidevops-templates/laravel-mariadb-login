@@ -220,4 +220,4 @@ stages:
   when:
     branch:
       include:
-        - master
+        - webinspect
